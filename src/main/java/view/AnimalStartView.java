@@ -4,16 +4,20 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.swing.JFrame;
+
 import controller.AnimalController;
 import exception.AnoNotExistException;
 import model.dao.AnimalDAO;
 import model.domain.Animal;
 import util.ScreenClear;
+import util.SoundPlayer;
 
 
 public class AnimalStartView {
 	private static Scanner sc;
 	public static void main(String[] args) {
+		SoundPlayer sp = new SoundPlayer();
 		AnimalController.deleteAll();
 		AnimalController.insert(new Animal(1, "꾸구리", "어류", "2급", "물의 흐름이 빠르고 자갈이 깔린 하천의 상류에 서식하며 수서곤충을 섭식한다."));
 		AnimalController.insert(new Animal(2, "날개하늘나리", "육상식물", "2급", "강원도 오대산, 설악산, 태백산, 대암산 등 강원도 이북 지방에 주로 분포한다"));

@@ -46,7 +46,7 @@ public class AnimalDetailView extends JFrame {
 	}
 
 	public void init() {
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
 		con = this.getContentPane();
 		con.setLayout(null);
@@ -105,7 +105,7 @@ public class AnimalDetailView extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				 
+				dispose();
 			}
 		});
 		con.add(bt_back);
